@@ -45,4 +45,11 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  width: 15%;
+  border: solid;
 }/*# sourceMappingURL=style.css.map */
