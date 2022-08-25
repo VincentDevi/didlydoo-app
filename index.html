@@ -4,15 +4,88 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="public/assets/style/sass/style.css">
+    <link rel="stylesheet" href="/assets/style/sass/style.css">
     
     <script defer type="module" src="/index.js"></script>
 
-    <title>Vite App</title>
+    <title>Didlydoo-app</title>
   </head>
   <body>
+    <header>
 
-    <h1>Didlydoo-app</h1>
+    </header>
+
+    <main id="main">
+
+      <form action="" method="post" class="form">
+        <label for="title">Your project: </label>
+        <input type="text" name="title" id="title">
+
+        <label for="author">Your name: </label>
+        <input type="text" name="author" id="author">
+
+        <label for="description">description</label>
+        <input type="text" name="description" id="description">
+
+        <label for="date">Pick a date: </label>
+        <input type="date" name="date1" id="date1">
+        <input type="date" name="date2" id="date2">
+        <input type="date" name="date3" id="date3">
+
+        <button id="submit">Submit</button>
+      </form>
+      
+      <section class="cards">
+
+        <div class="cards__header">
+          <h2 class="cards__header__title">Project Title</h2>
+          <h3 class="cards__header__author">Author</h3>
+          <p class="cards__header__description">description</p>
+        </div>
+
+        <div class="cards__table">
+
+          <div class="cards__table__header">
+            <h3 class="cards__table__header__author"></h3>
+            <time class="cards__table__header__date">1er date</time>
+            <time class="cards__table__header__date">2eme date</time>
+            <time class="cards__table__header__date">3eme date</time>
+          </div>
+
+          <div class="cards__table__count">
+            <p class="cards__table__count__title">Participants: </p>
+            <p class="cards__table__count__total">1</p>
+            <p class="cards__table__count__total">2</p>
+            <p class="cards__table__count__total">3</p>
+          </div>
+
+          <div class="cards__table__entry">
+
+            <h4 class="cards__table__entry__name"></h4>
+          
+            <input class="cards__table__entry__check" type="checkbox" name="1date" id="1">
+            <label for="1date">check</label>
+
+            <input class="cards__table__entry__check" type="checkbox" name="2date" id="">
+            <label for="2date" class="cards__table__entry__check">check</label>
+
+            <input class="cards__table__entry__check" type="checkbox" name="3date" id="">
+            <label for="3date" class="cards__table__entry__check">check</label>
+
+          </div>
+          
+              
+
+        </div>
+        
+
+      </section>
+    
+    </main>
+
+    <footer>
+
+    </footer>
 
   </body>
 </html>
