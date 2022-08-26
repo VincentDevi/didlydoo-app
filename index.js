@@ -41,3 +41,40 @@ createCheckBox(2, cards__table__entry__attendee)
 createCheckBox(2, cards__table__entry__attendee)
 
 // END OF CREATING CARDS
+
+
+
+// const fetchApi = async () =>{
+//     try{
+//     let response = await fetch('http://localhost:3000/api/events/'
+//     , {
+//             headers: { "Content-Type": "application/json"},
+//             method: 'POST',
+//             body: JSON.stringify({
+//               author:'Sophie',
+//               description: 'description PROUT',
+//             })
+//             }
+//             )
+//     let result = await response.json()
+//         console.log(result)
+//         console.log(result[0].author)
+//         console.log(result[4].author)
+
+//     }
+
+//     catch (e){
+//         console.error(e)
+//     }
+// }
+// fetchApi()
+
+
+// .then(function(response){ 
+//     return response.json()})
+//     .then(function(data)
+//     {console.log(data)
+//     title=document.getElementById("title")
+//     body=document.getElementById("bd")
+//     title.innerHTML = data.title
+//     body.innerHTML = data.body  
