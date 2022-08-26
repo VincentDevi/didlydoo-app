@@ -2,6 +2,7 @@ import { displayForm } from "./public/assets/modules/displayForm.js";
 import { createH4, createTitleH3, createTitleH2 } from "./public/assets/modules/creationCard/createTitles.js";
 import { createHeaderDescription, createDateTable, createParagraphTotal, createCheckBox } from "./public/assets/modules/creationCard/contentCard.js";
 import { createCardSqueleton,cards__header, cards__header__author, cards__table__header, cards__table__header__empty, cards__table__count, cards__table__entry__new, cards__table__entry__attendee } from "./public/assets/modules/creationCard/squeletonCard.js";
+import { sendForm } from "./public/assets/modules/sendForm.js";
 
 
 let btnForm = document.querySelector(".btnNewEvent") 
@@ -41,3 +42,5 @@ createCheckBox(2, cards__table__entry__attendee)
 createCheckBox(2, cards__table__entry__attendee)
 
 // END OF CREATING CARDS
+
+sendForm();
