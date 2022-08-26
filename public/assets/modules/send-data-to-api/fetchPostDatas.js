@@ -1,5 +1,8 @@
 
-
+/**
+ * send an object to the API
+ * @param {*object}  val 
+ */
 const FetchPostDatas = async (val)=>{
     try{
 

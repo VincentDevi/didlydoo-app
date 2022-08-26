@@ -1,3 +1,8 @@
+
+/**
+ * will take vales from all element of the form
+ * @returns an obect dats from the form
+ */
 const setAllDatas = () =>{
     const getTitleForm = document.getElementById('title').value;
     const getAuthorForm = document.getElementById('author').value;
