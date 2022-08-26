@@ -16,23 +16,25 @@
     </header>
 
     <main id="main">
+
       <button class="btnNewEvent">Add new event</button>
-      <form action="" method="post" class="form">
+
+      <form id="form" method="POST" class="form">
         <label for="title">Your project: </label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" class="form__title">
 
         <label for="author">Your name: </label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" class="form__author">
 
         <label for="description">description</label>
-        <input type="text" name="description" id="description">
+        <input type="text" name="description" id="description" class="form__description">
 
         <label for="date">Pick a date: </label>
-        <input type="date" name="date1" id="date1">
-        <input type="date" name="date2" id="date2">
-        <input type="date" name="date3" id="date3">
+        <input type="date" name="date1" id="date1" class="form__date">
+        <input type="date" name="date2" id="date2" class="form__date">
+        <input type="date" name="date3" id="date3" class="form__date">
 
-        <button id="submit">Submit</button>
+        <button id="submit" class="form__submit" type="submit">Submit</button>
       </form>
       
       <section class="cards">
@@ -81,9 +83,9 @@
         </article> -->
 
       </section>
-    
-    </main>
 
+    </main>
+    
     <footer>
 
     </footer>
