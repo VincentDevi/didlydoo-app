@@ -1,9 +1,10 @@
 @import '_reset.scss';
 
 .cards{
+border: gray 1px solid;
+
     input{
         display: inline-block;
-        border: red 2px solid;
         width: 1rem;
         height: 1rem;
         
