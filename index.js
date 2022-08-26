@@ -43,4 +43,4 @@ createCheckBox(2, cards__table__entry__attendee)
 
 // END OF CREATING CARDS
 
-sendForm();
+sendForm()
