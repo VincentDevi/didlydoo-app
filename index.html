@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/style/sass/style.css">
+    <link rel="stylesheet" href="/public/assets/style/sass/style.css">
     
-    <script defer type="module" src="/index.js"></script>
+    <script defer type="module" src="index.js"></script>
 
     <title>Didlydoo-app</title>
   </head>
@@ -17,7 +17,7 @@
 
     <main id="main">
 
-      <form action="" method="post" class="form">
+      <!-- <form action="" method="post" class="form">
         <label for="title">Your project: </label>
         <input type="text" name="title" id="title">
 
@@ -34,50 +34,51 @@
 
         <button id="submit">Submit</button>
       </form>
-      
+       -->
       <section class="cards">
 
-        <div class="cards__header">
-          <h2 class="cards__header__title">Project Title</h2>
-          <h3 class="cards__header__author">Author</h3>
-          <p class="cards__header__description">description</p>
-        </div>
+          <article class="cards__container">
 
-        <div class="cards__table">
+            <div class="cards__header">
+              <h2 class="cards__header__title">Project Title</h2>
+              <h3 class="cards__header__author">Author</h3>
+              <p class="cards__header__description">Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto doloribus omnis unde repellendus consectetur odio quas obcaecati placeat sequi doloremque! Beatae aspernatur sed fugiat sint labore corrupti a quisquam cupiditate!</p>
+            </div>
 
-          <div class="cards__table__header">
-            <h3 class="cards__table__header__author"></h3>
-            <time class="cards__table__header__date">1er date</time>
-            <time class="cards__table__header__date">2eme date</time>
-            <time class="cards__table__header__date">3eme date</time>
-          </div>
+            <div class="cards__table">
 
-          <div class="cards__table__count">
-            <p class="cards__table__count__title">Participants: </p>
-            <p class="cards__table__count__total">1</p>
-            <p class="cards__table__count__total">2</p>
-            <p class="cards__table__count__total">3</p>
-          </div>
+              <div class="cards__table__header">
+                <h3 class="cards__table__header__empty">1er dat</h3>
+                <time class="cards__table__header__date">1er date</time>
+                <time class="cards__table__header__date">2eme date</time>
+                <time class="cards__table__header__date">3eme date</time>
+              </div>
 
-          <div class="cards__table__entry">
+              <div class="cards__table__count">
+                <p class="cards__table__count__title">Participants:</p>
+                <p class="cards__table__count__total">1</p>
+                <p class="cards__table__count__total">2</p>
+                <p class="cards__table__count__total">3</p>
+              </div>
 
-            <h4 class="cards__table__entry__name"></h4>
-          
-            <input class="cards__table__entry__check" type="checkbox" name="1date" id="1">
-            <label for="1date">check</label>
+              <div class="cards__table__entry">
 
-            <input class="cards__table__entry__check" type="checkbox" name="2date" id="">
-            <label for="2date" class="cards__table__entry__check">check</label>
-
-            <input class="cards__table__entry__check" type="checkbox" name="3date" id="">
-            <label for="3date" class="cards__table__entry__check">check</label>
-
-          </div>
-          
+                <h4 class="cards__table__entry__name">Sophie</h4>
               
+                <input class="cards__table__entry__check" type="checkbox" name="1date" id="1">
+                <label for="1date">check</label>
 
-        </div>
-        
+                <input class="cards__table__entry__check" type="checkbox" name="2date" id="">
+                <label for="2date" class="cards__table__entry__check">check</label>
+
+                <input class="cards__table__entry__check" type="checkbox" name="3date" id="">
+                <label for="3date" class="cards__table__entry__check">check</label>
+
+            </div>
+            
+          </div>
+          
+        </article>
 
       </section>
     
