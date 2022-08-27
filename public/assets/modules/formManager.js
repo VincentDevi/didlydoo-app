@@ -8,6 +8,7 @@ function formManager(){
     
     const formClose = document.querySelector(".form__header__close__img")
     formClose.addEventListener("click", closeForm => {
+            closeForm.preventDefault()
             formContainer.style.display = "none"
             formContainer.reset() // resets the values of all elements in the form
         },{once : true}) // prevents eventslistener from stacking up

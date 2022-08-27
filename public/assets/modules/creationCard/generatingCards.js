@@ -13,7 +13,7 @@ export const generatingAllCards = (array) =>{
         console.log(e)
         createCardSqueleton()
         createTitleH2(e.name, cards__header)
-        createTitleH3(cards__header__author, cards__header, e.author, 'class-test')
+        createTitleH3(cards__header__author, cards__header, `created by ${e.author}`, 'cards__header__author')
         createHeaderDescription(e.description, cards__header)
         createTitleH3(cards__table__header__empty, cards__table__header, '', 'cards__table__header__empty')
         createDateTable(e.dates[0].date, cards__table__header)
@@ -23,14 +23,15 @@ export const generatingAllCards = (array) =>{
         createParagraphTotal(4, cards__table__count)
         createParagraphTotal(4, cards__table__count)
     
-        createCheckBox(2, cards__table__entry__new)
-        createCheckBox(2, cards__table__entry__new)
-        createCheckBox(2, cards__table__entry__new)
-    
         createH4(e.author, cards__table__entry__attendee)
-        createCheckBox(2, cards__table__entry__attendee)
-        createCheckBox(2, cards__table__entry__attendee)
-        createCheckBox(2, cards__table__entry__attendee)
+        createCheckBox(cards__table__entry__attendee)
+        createCheckBox(cards__table__entry__attendee)
+        createCheckBox(cards__table__entry__attendee)
+
+        createCheckBox(cards__table__entry__new)
+        createCheckBox(cards__table__entry__new)
+        createCheckBox(cards__table__entry__new)
     
+
     })
 } 

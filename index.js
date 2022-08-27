@@ -1,15 +1,15 @@
 // import { displayForm } from "./public/assets/modules/displayForm.js";
-import { sendForm } from "./public/assets/modules/sendForm.js";
-import { firstEventArr, allEventsArr } from "./public/assets/modules/fetching/fetchGetDatas.js";
 import { generatingAllCards } from "./public/assets/modules/creationCard/generatingCards.js";
 import { formManager } from "./public/assets/modules/formManager.js";
-
+import { sendForm } from "./public/assets/modules/send-data-to-api/sendForm.js";
+import { setEventTextInput} from "./public/assets/modules/adding-participant/setEventTextInput.js";
+import { firstEventArr, allEventsArr } from "./public/assets/modules/fetching/fetchGetDatas.js";
 
 console.log(firstEventArr)
 
 
 let btnForm = document.querySelector(".btnNewEvent") 
-btnForm.addEventListener("click", formHandler) 
+btnForm.addEventListener("click", formManager) 
 
 // Target and display/hide .form
 // function formHandler(){
@@ -18,8 +18,6 @@ btnForm.addEventListener("click", formHandler)
 
 
 
-sendForm()
-
 // GENERATE ALL EXISTING CARDS FORM API WHEN WINDOW OPENS
 generatingAllCards(allEventsArr)
 
@@ -27,3 +25,13 @@ generatingAllCards(allEventsArr)
 document.querySelector(".btnNewEvent").addEventListener("click", formManager) 
 
 
+
+// start of sendForm
+sendForm();
+// end of sendForm
+
+// START EVENT TO ADD A NEW PARTICIPANT
+setEventTextInput();
+// END EVENT TO ADD A NEW PARTICIPANT
+
+sendForm()

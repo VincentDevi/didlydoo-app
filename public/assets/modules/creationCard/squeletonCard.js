@@ -79,6 +79,7 @@ const createDivTableEntryNew = () => {
 
 const createNewInputLine = () =>{
     let cards__table__entry__name__input = document.createElement('input')
+    cards__table__entry__name__input.id = 'textInput';
     cards__table__entry__name__input.classList.add('cards__table__entry__name__input')
     cards__table__entry__new.appendChild(cards__table__entry__name__input)
     cards__table__entry__name__input.type = "text"
@@ -88,6 +89,7 @@ const createDivTableEntryAttendee = () => {
     cards__table__entry__attendee = document.createElement('div');
     cards__table__entry__attendee.classList.add('cards__table__entry__attendee')
     cards__table__entry.appendChild(cards__table__entry__attendee)
+    return cards__table__entry__attendee;
 }
 
 /**
@@ -101,7 +103,9 @@ export const createCardSqueleton = () =>{
     createDivTableCount()
     createParagraphTotalTitle()
     createDivTableEntry()
-    createDivTableEntryAttendee()
     createDivTableEntryNew()
     createNewInputLine()
+    createDivTableEntryAttendee()
 }
+
+export{createDivTableEntryAttendee};
