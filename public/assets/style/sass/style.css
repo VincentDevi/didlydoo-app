@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -46,11 +47,89 @@ input {
   border-radius: 0;
 }
 
+body, html {
+  background-color: rgb(207, 207, 207);
+}
+
+main {
+  height: 100vh;
+}
+
 .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
   display: none;
   flex-direction: column;
-  width: 15%;
-  border: solid;
+  align-items: center;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(252, 252, 252);
+  color: rgb(26, 26, 26);
+}
+.form > * {
+  width: 90%;
+}
+.form .form__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+.form .form__header img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.form .form__header h3 {
+  font-size: 20px;
+  max-width: 120px;
+}
+.form .form__header .form__header__close {
+  margin-left: auto;
+}
+.form .form__header .form__header__close .form__header__close__img {
+  border: none;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+.form p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.form label {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+.form input {
+  margin-bottom: 8px;
+  border: solid rgb(207, 207, 207) 0.5px;
+  border-radius: 4px;
+  color: rgb(108, 108, 108);
+  font-size: 12px;
+}
+.form #description {
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 10vh;
+  max-height: 30vh;
+  margin-bottom: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(108, 108, 108);
+}
+.form #submit {
+  cursor: pointer;
+  background-color: rgb(72, 127, 255);
+  border: none;
+  border-radius: 5px;
+  color: rgb(252, 252, 252);
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 16px;
 }
 
 *, *:before, *:after {
