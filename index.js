@@ -1,8 +1,5 @@
-import { displayForm } from "./public/assets/modules/displayForm.js";
-let btnForm = document.querySelector(".btnNewEvent") 
-btnForm.addEventListener("click", formHandler) 
+// Import function and call this one on click
+import {formManager} from "./public/assets/modules/formManager.js";
+document.querySelector(".btnNewEvent").addEventListener("click", formManager) 
 
-// Target and display/hide .form
-function formHandler(){
-    displayForm("form")
-}
+

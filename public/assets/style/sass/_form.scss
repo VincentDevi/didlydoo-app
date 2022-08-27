@@ -1,53 +1,84 @@
-body{
+body, html{
     background-color: $background;
 }
+main{
+    height: 100vh;
+}
 .form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     background-color: $form_back;
     color: $form_font;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 200px;
-    border-radius: 5px;
-    overflow: hidden;
     & > * {
-        width: 80%;
-        margin: 0 20px;
+        width: 90%;
     }
     .form__header{
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         margin-top: 20px;
         img{
             width: 20px;
+            height: 20px;
+            margin-right: 5px;
         }
         h3{
-            font-size: 24px;
+            font-size: 20px;
             max-width: 120px;
         }
-
+        .form__header__close{
+            margin-left: auto;
+            .form__header__close__img{
+                border: none;
+                width: 15px;
+                height: 15px;
+                margin: 5px;
+            }
+        }   
     }
-
     p{
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 15px;
         margin-top: 10px;
     }
     label{
         margin-bottom: 3px;
+        font-size: 14px;
     }
     input{
         margin-bottom: 8px;
         border: solid $background 0.5px;
         border-radius: 4px;
-        color: $form_font;
+        color: $form_lightFont;
+        font-size: 12px;
+    }
+    #description{
+        min-width: 90%;
+        max-width: 90%;
+        min-height: 10vh;
+        max-height: 30vh;
+        margin-bottom: 8px;
+        font-family: 'Montserrat', sans-serif;
+        color: $form_lightFont;
     }
     #submit{
         cursor: pointer;
         background-color: $form_submit;
         border: none;
-        border-radius: 3px;
+        border-radius: 5px;
         color: $form_back;
         margin-bottom: 20px;
-    }
+        padding: 5px;
+        font-size: 16px;
+    }    
+        
 }
