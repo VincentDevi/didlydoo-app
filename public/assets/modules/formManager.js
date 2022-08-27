@@ -12,4 +12,4 @@ function formManager(){
             formContainer.reset() // resets the values of all elements in the form
         },{once : true}) // prevents eventslistener from stacking up
 }
-export {formManager}
+export { formManager }
