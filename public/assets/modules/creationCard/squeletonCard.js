@@ -106,9 +106,9 @@ export const createCardSqueleton = () =>{
     createDivTableCount()
     createParagraphTotalTitle()
     createDivTableEntry()
-    createDivTableEntryAttendee()
     createDivTableEntryNew()
     createNewInputLine()
+    createDivTableEntryAttendee()
 }
 
 export{createDivTableEntryAttendee};

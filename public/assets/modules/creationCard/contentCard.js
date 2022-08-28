@@ -34,7 +34,7 @@ export const createParagraphTotal = (total, parent) =>{
 }
 
 /**
- * reate CHECKBOX. 
+ * create CHECKBOX. 
  * Div is created - Label is created - input Checkbox is created
  * Parent is requested. Either cards__table__entry__new or cards__table__entry__attendee
  * @param {string} idElement 

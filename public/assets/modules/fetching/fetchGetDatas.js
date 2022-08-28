@@ -1,3 +1,4 @@
+// import {  } from "./public/assets/modules/creationCard/generatingCards.js";
 export const urlEvents = 'http://localhost:3000/api/events/';
 
 export const fetchGetDatas = async (url) =>{
@@ -5,12 +6,6 @@ export const fetchGetDatas = async (url) =>{
         const response = await fetch(url)
         const result = await response.json()
         return result;
-        // console.log(result)
-        // console.log(result[0].description)
-        // arr = []
-        // arr.push(result)
-        // console.log(arr)
-
     }
 
     catch (e){
@@ -19,5 +14,5 @@ export const fetchGetDatas = async (url) =>{
 
 }
 
-const allEventsArr = await fetchGetDatas(urlEvents)
+export const allEventsArr = await fetchGetDatas(urlEvents)
 export const firstEventArr = allEventsArr[0];

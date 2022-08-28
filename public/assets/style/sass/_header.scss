@@ -1,0 +1,15 @@
+header{
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    text-align: center;
+    margin: 2rem;
+
+    img{
+        height: 2rem;
+    }
+    h1{
+        font-size: 2.6rem;
+        font-weight: 800;
+    }
+}

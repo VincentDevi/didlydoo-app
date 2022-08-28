@@ -2,39 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <link rel="icon" type="image" href="public/assets/images/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/assets/style/sass/style.css">
     
-    <script defer type="module" src="./index.js"></script>
 
     <title>Didlydoo-app</title>
   </head>
   <body>
     <header>
 
+      <img src="/public/assets/images/Logo.png" alt="logo">
+      <h1>Didly-Doo</h1>
+
     </header>
 
     <main id="main">
 
       <button class="btnNewEvent">Add new event</button>
+      <form class="form" id="form" action="" method="POST">
+        <div class="form__header">
+          <img class="form__header__icone" src="./public/assets/images/calendar.png" alt="calendar icon">
+          <h3 class="form__header__name">Add event</h3>
+          <div class="form__header__close">
+            <img class="form__header__close__img" src="./public/assets/images/cancel.png" alt="close form">
+          </div>
+        </div>
+        <p class="form__description">Make sure that the necessary arrangements are made on your event</p>
 
-      <form id="form" method="POST" class="form">
-        <label for="title">Your project: </label>
-        <input type="text" name="title" id="title" class="form__title">
+        <label for="title">Your project </label>
+        <input type="text" name="title" id="title">
 
-        <label for="author">Your name: </label>
-        <input type="text" name="author" id="author" class="form__author">
+        <label for="author">Your name </label>
+        <input type="text" name="author" id="author">
 
-        <label for="description">description</label>
-        <input type="text" name="description" id="description" class="form__description">
+        <label for="description">Description</label>
+        <textarea id="description" name="story" rows="5" cols="33"></textarea>
 
-        <label for="date">Pick a date: </label>
-        <input type="date" name="date1" id="date1" class="form__date">
-        <input type="date" name="date2" id="date2" class="form__date">
-        <input type="date" name="date3" id="date3" class="form__date">
 
-        <button id="submit" class="form__submit" type="submit">Submit</button>
+        <label for="date">Pick a date </label>
+        <input type="date" name="date1" id="date1">
+        <input type="date" name="date2" id="date2">
+        <input type="date" name="date3" id="date3">
+        <input type="submit" id="submit" value="Submit">
       </form>
       
       <section class="cards">
@@ -89,6 +99,7 @@
     <footer>
 
     </footer>
+    <script type="module" src="./index.js"></script>
 
   </body>
 </html>
