@@ -17,6 +17,9 @@ btnForm.addEventListener("click", formManager)
 // }
 
 
+//CREATING CARDS
+let cards = document.querySelector('.cards')
+console.log(cards)
 
 // GENERATE ALL EXISTING CARDS FORM API WHEN WINDOW OPENS
 generatingAllCards(allEventsArr)
@@ -25,6 +28,7 @@ generatingAllCards(allEventsArr)
 document.querySelector(".btnNewEvent").addEventListener("click", formManager) 
 
 
+// END OF CREATING CARDS
 
 // start of sendForm
 sendForm();
@@ -33,5 +37,3 @@ sendForm();
 // START EVENT TO ADD A NEW PARTICIPANT
 setEventTextInput();
 // END EVENT TO ADD A NEW PARTICIPANT
-
-sendForm()
