@@ -8,11 +8,10 @@ export let cards__table__entry__new
 export let cards__table__entry__attendee
 
 let cards__table
-let cards__table__entry
+export let cards__table__entry
 
 
 let cards = document.querySelector('.cards')
-console.log(cards)
 
 // create CARD CONTAINER AND HEADER
 /**
@@ -80,9 +79,9 @@ const createDivTableEntryNew = () => {
     cards__table__entry.appendChild(cards__table__entry__new)
 }
 
-const createNewInputLine = () =>{
+const createNewInputLine = (aId) =>{
     let cards__table__entry__name__input = document.createElement('input')
-    cards__table__entry__name__input.id = 'textInput';
+    cards__table__entry__name__input.id = aId;
     cards__table__entry__name__input.classList.add('cards__table__entry__name__input')
     cards__table__entry__new.appendChild(cards__table__entry__name__input)
     cards__table__entry__name__input.type = "text"
@@ -98,7 +97,7 @@ const createDivTableEntryAttendee = () => {
 /**
  * Creating the squeleton of the cards - without inputs
  */
-export const createCardSqueleton = () =>{
+export const createCardSqueleton = (eEd) =>{
     createMainArticle()
     createHeaderDiv()
     createdivCardTable()
@@ -107,7 +106,7 @@ export const createCardSqueleton = () =>{
     createParagraphTotalTitle()
     createDivTableEntry()
     createDivTableEntryNew()
-    createNewInputLine()
+    createNewInputLine(eEd)
     createDivTableEntryAttendee()
 }
 

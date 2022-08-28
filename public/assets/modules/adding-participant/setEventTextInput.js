@@ -1,45 +1,35 @@
-import { addNewParticipants } from "./addNewParticipants.js";
-
+import { allEventsArr } from "../fetching/fetchGetDatas.js";
+import { fecthPostParticipants } from "./addNewParticipants.js";
+import { setEvenementId } from "./setEvenementId.js";
+import { createObjectAttendee } from "./createObjectAttendee.js";
+import { fecthGetLastAttendee } from "./addLatestAttendee.js";
+import { showNewParticipant } from "./showNewParticpant.js";
 
 /**
  * Event listener on the text Input
  * will call addNewParticipant
  */
 const setEventTextInput = () =>{
-    const getTextInput =document.getElementById('textInput');
+   const textInputs = document.getElementsByClassName('cards__table__entry__name__input');
 
-    getTextInput.addEventListener('keyup',e =>{
-        if(e.code === 'Enter'){
-            const inputValue = getTextInput.value;
-            addNewParticipants(inputValue);
+   for (const textInput of textInputs) {
+    textInput.addEventListener('keyup',e=>{
+        if (e.code ==='Enter'){
+            const attendeeName = textInput.value;
+            const evenementId = setEvenementId(textInput);
+            const evenementTextInput = allEventsArr.filter(item => item.id===evenementId);
+            const inputParent = textInput.parentElement;
+            const lala = inputParent.parentElement;
+            console.log(inputParent);
+            const attend= createObjectAttendee(attendeeName,evenementTextInput);
+            fecthPostParticipants(attend,evenementId,lala);
+
+
+            
+
         }
     })
+   }
 }
-const urlAddAttendee ='http://localhost:3000/api/events/[id]/attend';
-
-const getIdofServer = (elem) =>{
-        let ok =elem.parentElement;
-        while(ok != 'article'){
-        ok= ok.parentElement;
-       }
-       const key = ok.getAttribute('value');
-       fetchAddAttendee(key);
-}
-
-const fetchAddAttendee = async (key) =>{
-    try{
-        const response =await fetch(urlAddAttendee,{
-            headers: { "Content-Type": "application/json" },
-            method : 'POST',
-            body : data,
-        })
-    }
-    catch(error){
-        console.error(error);
-    }
-}
-
-
-
 
 export{setEventTextInput};
