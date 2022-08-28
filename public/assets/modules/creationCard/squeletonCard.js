@@ -21,6 +21,9 @@ console.log(cards)
 const createMainArticle = () => {
     cards__container = document.createElement('article');
     cards__container.classList.add('cards__container')
+    // Vincent add something here
+    cards__container.setAttribute ('value','key');
+    // end 
     cards.appendChild(cards__container)
 } 
 

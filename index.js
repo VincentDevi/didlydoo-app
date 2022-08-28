@@ -36,14 +36,6 @@ createParagraphTotal(1, cards__table__count)
 createParagraphTotal(4, cards__table__count)
 createParagraphTotal(4, cards__table__count)
 
-createCheckBox( cards__table__entry__new)
-createCheckBox( cards__table__entry__new)
-createCheckBox( cards__table__entry__new)
-
-createH4('Sophie', cards__table__entry__attendee)
-createCheckBox( cards__table__entry__attendee)
-createCheckBox( cards__table__entry__attendee)
-createCheckBox( cards__table__entry__attendee)
 
 // END OF CREATING CARDS
 
