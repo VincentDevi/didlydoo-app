@@ -23,10 +23,6 @@ const setEventTextInput = () =>{
             console.log(inputParent);
             const attend= createObjectAttendee(attendeeName,evenementTextInput);
             fecthPostParticipants(attend,evenementId,lala);
-
-
-            
-
         }
     })
    }
