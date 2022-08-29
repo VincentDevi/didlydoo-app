@@ -5,7 +5,6 @@ import { sendForm } from "./public/assets/modules/send-data-to-api/sendForm.js";
 import { setEventTextInput} from "./public/assets/modules/adding-participant/setEventTextInput.js";
 import { firstEventArr, allEventsArr } from "./public/assets/modules/fetching/fetchGetDatas.js";
 
-console.log(firstEventArr)
 
 
 let btnForm = document.querySelector(".btnNewEvent") 
@@ -19,7 +18,6 @@ btnForm.addEventListener("click", formManager)
 
 //CREATING CARDS
 let cards = document.querySelector('.cards')
-console.log(cards)
 
 // GENERATE ALL EXISTING CARDS FORM API WHEN WINDOW OPENS
 generatingAllCards(allEventsArr)
