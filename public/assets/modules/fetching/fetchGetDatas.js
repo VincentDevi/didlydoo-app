@@ -14,5 +14,5 @@ export const fetchGetDatas = async (url) =>{
 
 }
 
-export const allEventsArr = await fetchGetDatas(urlEvents)
+export const allEventsArr = await fetchGetDatas(urlEvents);
 export const firstEventArr = allEventsArr[0];

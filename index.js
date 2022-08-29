@@ -4,6 +4,7 @@ import { formManager } from "./public/assets/modules/formManager.js";
 import { sendForm } from "./public/assets/modules/send-data-to-api/sendForm.js";
 import { setEventTextInput} from "./public/assets/modules/adding-participant/setEventTextInput.js";
 import { firstEventArr, allEventsArr } from "./public/assets/modules/fetching/fetchGetDatas.js";
+import { addEventOnPlusIcon } from "./public/assets/modules/add-date-to-event/addEventonPlusIcon.js";
 
 
 
@@ -25,7 +26,9 @@ generatingAllCards(allEventsArr)
 // Import function and call this one on click
 document.querySelector(".btnNewEvent").addEventListener("click", formManager) 
 
-
+// start event plus icon for date
+addEventOnPlusIcon();
+// end event plus icon for date
 // END OF CREATING CARDS
 
 // start of sendForm

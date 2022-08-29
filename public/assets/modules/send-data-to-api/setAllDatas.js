@@ -1,3 +1,4 @@
+import { allEventsArr } from "../fetching/fetchGetDatas";
 
 /**
  * will take vales from all element of the form
@@ -11,12 +12,19 @@ const setAllDatas = () =>{
     const dat2 = document.getElementById('date2').value;
     const dat3 =document.getElementById('date3').value;
 
+    let AllDates = document.getElementsByClassName('form__date');
+    let datesArr = [];
+    for (const date of AllDates) {
+       datesArr.push(date.value);
+       
+   }
     let datas = {
         name: getTitleForm, 
-        dates:[dat1,dat2,dat3],
+        dates:datesArr,
         author: getAuthorForm, 
         description: getDescriptionForm,
     }
+    console.log(AllDates);
     return datas;
 }
 

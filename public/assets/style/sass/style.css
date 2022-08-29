@@ -131,6 +131,14 @@ main {
   padding: 5px;
   font-size: 16px;
 }
+.form__container {
+  width: 20px;
+  height: 20px;
+}
+.form__container__image {
+  width: 100%;
+  height: auto;
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -281,4 +289,4 @@ header img {
 header h1 {
   font-size: 2.6rem;
   font-weight: 800;
-}
+}/*# sourceMappingURL=style.css.map */

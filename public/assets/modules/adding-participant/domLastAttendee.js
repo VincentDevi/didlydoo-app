@@ -8,13 +8,12 @@ const astuce = (parent) =>{
     return div;  
 }
 
-const domLastAttendee = (name,el) =>{
-    const ok = astuce(el);
-    createH4(name,ok);
-    createCheckBox(ok);
-    createCheckBox(ok);
-    createCheckBox(ok);
-
+const domLastAttendee = (name,element,iteration) =>{
+    const parentDiv = astuce(element);
+    createH4(name,parentDiv);
+    for (let count =0 ;count<iteration;count++){
+        createCheckBox(parentDiv);
+    }
 }
 
 export{domLastAttendee,astuce};

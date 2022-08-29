@@ -2,13 +2,13 @@ import { domLastAttendee } from "./domLastAttendee";
 
 
 const showNewParticipant = async (data,b) =>{
-    console.log(b);
+    const iteration = data.dates.length;
+    console.log(iteration);
     const attendeesArray = data.dates[0].attendees;
     const attendeesArrayLength = attendeesArray.length;
     const attendeesName = attendeesArray[attendeesArrayLength-1];
-    console.log(attendeesName.name);
 
-    domLastAttendee(attendeesName.name,b);
+    domLastAttendee(attendeesName.name,b,iteration);
     
     return attendeesName.name;
 
