@@ -5,18 +5,17 @@ import {closeCard} from '/public/assets/modules/delete-card/undisplay.js'
  * @param {string} title 
  */
 
-
 export const createTitleH2 = (title, parent) =>{
     let cards__header__title = document.createElement('h2');
     parent.appendChild(cards__header__title)
-    cards__header__title.classList.add('cards__header__title')
+    cards__header__title.classList.add('cards__header__top__title')
     cards__header__title.innerText = title
 }
 
 export const createCloseIcon = (parent, id) => {
     let closeIcon = document.createElement("img")
     closeIcon.setAttribute("src", "./public/assets/images/cancel.png")
-    closeIcon.classList.add("cards__header__close")
+    closeIcon.classList.add("cards__header__top__close")
     closeIcon.classList.add(id)
     closeIcon.setAttribute("value",id)
     closeIcon.addEventListener("click", closCard =>{

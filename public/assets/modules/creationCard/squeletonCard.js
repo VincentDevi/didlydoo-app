@@ -1,5 +1,6 @@
 export let cards__container;
 export let cards__header;
+export let cards__header__top
 export let cards__header__author;
 export let cards__table__header
 export let cards__table__header__empty
@@ -34,6 +35,12 @@ const createHeaderDiv = () => {
     cards__header = document.createElement('div');
     cards__header.classList.add('cards__header')
     cards__container.appendChild(cards__header)
+}
+
+const createTopContainer = () =>{
+    cards__header__top = document.createElement("div")
+    cards__header__top.classList.add("cards__header__top")
+    cards__header.appendChild(cards__header__top)
 }
 
 
@@ -101,6 +108,7 @@ const createDivTableEntryAttendee = () => {
 export const createCardSqueleton = (eEd) =>{
     createMainArticle(eEd)
     createHeaderDiv()
+    createTopContainer()
     createdivCardTable()
     createDivTableHeader()
     createDivTableCount()

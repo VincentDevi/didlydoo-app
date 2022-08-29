@@ -29,14 +29,19 @@ font-family: 'Montserrat', sans-serif;
         margin: 10px;
     }
     &__header{
-        &__title{
-            font-weight:900;
-            font-size: 1.6rem;
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            &__title{
+                font-weight:900;
+                font-size: 1.6rem;
+            }
+            &__close{
+                width: 15px;
+                height: 15px;
+            }
         }
-        &__close{
-            width: 20px;
-            height: 20px;
-        }
+
         &__author{
             font-size: small;
             margin-bottom: 20px;
