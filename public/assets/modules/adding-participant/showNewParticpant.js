@@ -1,4 +1,4 @@
-import { domLastAttendee } from "./domLastAttendee";
+import { domLastAttendee } from "./domLastAttendee.js";
 
 
 const showNewParticipant = async (data,b) =>{

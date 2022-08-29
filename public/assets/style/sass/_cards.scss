@@ -33,6 +33,10 @@ font-family: 'Montserrat', sans-serif;
             font-weight:900;
             font-size: 1.6rem;
         }
+        &__close{
+            width: 20px;
+            height: 20px;
+        }
         &__author{
             font-size: small;
             margin-bottom: 20px;

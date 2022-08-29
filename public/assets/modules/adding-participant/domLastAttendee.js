@@ -14,7 +14,6 @@ const domLastAttendee = (name,el) =>{
     createCheckBox(ok);
     createCheckBox(ok);
     createCheckBox(ok);
-
 }
 
 export{domLastAttendee,astuce};

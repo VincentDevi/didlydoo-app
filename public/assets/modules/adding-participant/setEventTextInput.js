@@ -17,6 +17,7 @@ const setEventTextInput = () =>{
         if (e.code ==='Enter'){
             const attendeeName = textInput.value;
             const evenementId = setEvenementId(textInput);
+            console.log(evenementId)
             const evenementTextInput = allEventsArr.filter(item => item.id===evenementId);
             const inputParent = textInput.parentElement;
             const lala = inputParent.parentElement;

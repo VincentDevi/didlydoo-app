@@ -17,9 +17,10 @@ let cards = document.querySelector('.cards')
 /**
  * Creating card container
  */
-const createMainArticle = () => {
+const createMainArticle = (id) => {
     cards__container = document.createElement('article');
     cards__container.classList.add('cards__container')
+    cards__container.classList.add(id)
     // Vincent add something here
     cards__container.setAttribute ('value','key');
     // end 
@@ -98,7 +99,7 @@ const createDivTableEntryAttendee = () => {
  * Creating the squeleton of the cards - without inputs
  */
 export const createCardSqueleton = (eEd) =>{
-    createMainArticle()
+    createMainArticle(eEd)
     createHeaderDiv()
     createdivCardTable()
     createDivTableHeader()
