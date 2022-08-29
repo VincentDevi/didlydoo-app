@@ -1,5 +1,6 @@
 export let cards__container;
 export let cards__header;
+export let cards__header__top
 export let cards__header__author;
 export let cards__table__header
 export let cards__table__header__empty
@@ -17,9 +18,10 @@ let cards = document.querySelector('.cards')
 /**
  * Creating card container
  */
-const createMainArticle = () => {
+const createMainArticle = (id) => {
     cards__container = document.createElement('article');
     cards__container.classList.add('cards__container')
+    cards__container.classList.add(id)
     // Vincent add something here
     cards__container.setAttribute ('value','key');
     // end 
@@ -33,6 +35,12 @@ const createHeaderDiv = () => {
     cards__header = document.createElement('div');
     cards__header.classList.add('cards__header')
     cards__container.appendChild(cards__header)
+}
+
+const createTopContainer = () =>{
+    cards__header__top = document.createElement("div")
+    cards__header__top.classList.add("cards__header__top")
+    cards__header.appendChild(cards__header__top)
 }
 
 
@@ -98,8 +106,9 @@ const createDivTableEntryAttendee = () => {
  * Creating the squeleton of the cards - without inputs
  */
 export const createCardSqueleton = (eEd) =>{
-    createMainArticle()
+    createMainArticle(eEd)
     createHeaderDiv()
+    createTopContainer()
     createdivCardTable()
     createDivTableHeader()
     createDivTableCount()

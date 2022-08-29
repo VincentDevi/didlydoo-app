@@ -206,9 +206,17 @@ input {
 .cards__header > * {
   margin: 10px;
 }
-.cards__header__title {
+.cards__header__top {
+  display: flex;
+  justify-content: space-between;
+}
+.cards__header__top__title {
   font-weight: 900;
   font-size: 1.6rem;
+}
+.cards__header__top__close {
+  width: 15px;
+  height: 15px;
 }
 .cards__header__author {
   font-size: small;

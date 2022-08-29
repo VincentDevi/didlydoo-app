@@ -11,6 +11,7 @@ const sendForm = () =>{
         submission.preventDefault();
         const data =setAllDatas();
         FetchPostDatas(data);
+       
     })
 }
 

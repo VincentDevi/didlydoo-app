@@ -14,6 +14,7 @@ const domLastAttendee = (name,element,iteration) =>{
     for (let count =0 ;count<iteration;count++){
         createCheckBox(parentDiv);
     }
+
 }
 
 export{domLastAttendee,astuce};
