@@ -40,7 +40,7 @@ export const createParagraphTotal = (total, parent) =>{
  * @param {string} idElement 
  * @param {var} parent 
  */
-export const createCheckBox = (parent) =>{
+export const createCheckBox = (parent, id) =>{
     let cards__table__entry__container__check = document.createElement('div')
     cards__table__entry__container__check.classList.add('cards__table__entry__container__check')
     parent.appendChild(cards__table__entry__container__check)
@@ -51,6 +51,7 @@ export const createCheckBox = (parent) =>{
     let cards__table__entry__check = document.createElement('input')
     cards__table__entry__container__check.appendChild(cards__table__entry__check)
     cards__table__entry__check.classList.add('cards__table__entry__check')
+    cards__table__entry__check.classList.add(id)
     cards__table__entry__check.type = "checkbox"
     cards__table__entry__check.name = "check"
 }
