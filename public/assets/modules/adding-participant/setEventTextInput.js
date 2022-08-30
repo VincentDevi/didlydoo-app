@@ -17,18 +17,20 @@ const setEventTextInput = () =>{
         if (e.code ==='Enter'){
             const attendeeName = textInput.value;
             const evenementId = setEvenementId(textInput);
+            const inputParent = textInput.parentElement;
+            const lala = inputParent.parentElement;
             console.log(evenementId)
             fetchGetDatas()
             .then(async (res)=>{
-                generatingAllCards(await fetchGetDatas())
+                const array = await fetchGetDatas();
+                const evenementTextInput = array.filter(item =>item.id === evenementId);
+                const attend = createObjectAttendee(attendeeName,evenementTextInput);
+                fecthPostParticipants(attend,evenementId,lala);
+
             })
-            const evenementTextInput = allEventsArr.filter(item => item.id===evenementId);
-            const inputParent = textInput.parentElement;
-            const lala = inputParent.parentElement;
+           
 
             
-            const attend= createObjectAttendee(attendeeName,evenementTextInput);
-            fecthPostParticipants(attend,evenementId,lala);
         }
     })
    }
