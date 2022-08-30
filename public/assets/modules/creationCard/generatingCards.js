@@ -4,6 +4,7 @@ import { cards__header__top,createCardSqueleton,cards__header, cards__header__au
 import {domLastAttendee} from '/public/assets/modules/adding-participant/domLastAttendee.js'
 
 let cards = document.querySelector('.cards')
+const textInputs = document.getElementsByClassName('cards__table__entry__name__input');
 
 
 const mapAllDates = (arr) =>{
@@ -21,9 +22,10 @@ const mapAllDates = (arr) =>{
  * @param {arr} arrayCard 
  */
 export const generatingAllCards = (array) =>{
+cards.innerHTML= "";
 
     array.map(e =>{
-        // cards.innerHTML= "";
+        
         createCardSqueleton(e.id)
         createTitleH2(e.name, cards__header__top)
         createCloseIcon(cards__header__top, e.id)
