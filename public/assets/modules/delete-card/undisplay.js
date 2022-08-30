@@ -5,6 +5,8 @@ export async function closeCard(id) {
             headers: { "Content-Type": "application/json" },
             method: "DELETE",
         });
+        window.location.reload()
+
     } catch (err) {
         console.log(err)
     }

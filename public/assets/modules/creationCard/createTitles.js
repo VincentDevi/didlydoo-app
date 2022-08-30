@@ -20,8 +20,6 @@ export const createCloseIcon = (parent, id) => {
     closeIcon.setAttribute("value",id)
     closeIcon.addEventListener("click", closCard =>{
         closeCard(id)
-        alert('Hope you had fun')
-        window.location.reload()
     })
     parent.appendChild(closeIcon)
 
