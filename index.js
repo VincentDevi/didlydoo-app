@@ -32,7 +32,7 @@ addEventOnPlusIcon();
 // END OF CREATING CARDS
 
 // start of sendForm
-sendForm();
+sendForm(allEventsArr);
 // end of sendForm
 
 // START EVENT TO ADD A NEW PARTICIPANT

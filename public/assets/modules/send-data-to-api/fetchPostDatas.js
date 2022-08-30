@@ -11,6 +11,7 @@ const FetchPostDatas = async (val)=>{
             method:'POST',
             body : JSON.stringify(val),
             })
+            window.location.reload()
         }
     catch(error){
         console.error(error);
