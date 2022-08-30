@@ -1,4 +1,3 @@
-import { allEventsArr } from "../fetching/fetchGetDatas";
 
 /**
  * will take vales from all element of the form
@@ -16,7 +15,6 @@ const setAllDatas = () =>{
     let datesArr = [];
     for (const date of AllDates) {
        datesArr.push(date.value);
-       
    }
     let datas = {
         name: getTitleForm, 

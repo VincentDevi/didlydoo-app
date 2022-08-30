@@ -8,11 +8,11 @@ const astuce = (parent) =>{
     return div;  
 }
 
-const domLastAttendee = (name,element,iteration) =>{
+const domLastAttendee = (name,element,iteration, id) =>{
     const parentDiv = astuce(element);
     createH4(name,parentDiv);
     for (let count =0 ;count<iteration;count++){
-        createCheckBox(parentDiv);
+        createCheckBox(parentDiv, id);
     }
 
 }
