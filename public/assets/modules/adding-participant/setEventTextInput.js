@@ -27,6 +27,7 @@ const setEventTextInput = () =>{
         }
     })
    }
+   
 }
 
 export{setEventTextInput};
