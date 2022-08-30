@@ -8,9 +8,6 @@ import { addEventOnPlusIcon } from "./public/assets/modules/add-date-to-event/ad
 
 
 
-let btnForm = document.querySelector(".btnNewEvent") 
-btnForm.addEventListener("click", formManager) 
-
 // Target and display/hide .form
 // function formHandler(){
 //     displayForm("form")
