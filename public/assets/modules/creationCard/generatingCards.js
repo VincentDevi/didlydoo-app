@@ -2,8 +2,10 @@ import { createCloseIcon, createTitleH3, createTitleH2 } from "./createTitles.js
 import { createHeaderDescription, createDateTable, createParagraphTotal, createCheckBox } from "./contentCard.js";
 import { cards__header__top,createCardSqueleton,cards__header, cards__header__author, cards__table__header, cards__table__header__empty, cards__table__count, cards__table__entry, cards__table__entry__attendee } from "./squeletonCard.js";
 import {domLastAttendee} from '/public/assets/modules/adding-participant/domLastAttendee.js'
+import { setEventTextInput } from "../adding-participant/setEventTextInput.js";
 
 let cards = document.querySelector('.cards')
+const textInputs = document.getElementsByClassName('cards__table__entry__name__input');
 
 
 const mapAllDates = (arr) =>{
@@ -21,9 +23,10 @@ const mapAllDates = (arr) =>{
  * @param {arr} arrayCard 
  */
 export const generatingAllCards = (array) =>{
+cards.innerHTML= "";
 
     array.map(e =>{
-        // cards.innerHTML= "";
+        
         createCardSqueleton(e.id)
         createTitleH2(e.name, cards__header__top)
         createCloseIcon(cards__header__top, e.id)
@@ -40,4 +43,5 @@ export const generatingAllCards = (array) =>{
             domLastAttendee(attendee.name,cards__table__entry,nbrOfDate);
         }
     })
+    setEventTextInput();
 } 

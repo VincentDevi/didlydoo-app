@@ -33,5 +33,4 @@ sendForm(allEventsArr);
 // end of sendForm
 
 // START EVENT TO ADD A NEW PARTICIPANT
-setEventTextInput();
 // END EVENT TO ADD A NEW PARTICIPANT

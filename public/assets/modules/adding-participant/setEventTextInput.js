@@ -1,4 +1,4 @@
-import { allEventsArr } from "../fetching/fetchGetDatas.js";
+import { allEventsArr, fetchGetDatas } from "../fetching/fetchGetDatas.js";
 import { fecthPostParticipants } from "./addNewParticipants.js";
 import { setEvenementId } from "./setEvenementId.js";
 import { createObjectAttendee } from "./createObjectAttendee.js";
@@ -18,10 +18,15 @@ const setEventTextInput = () =>{
             const attendeeName = textInput.value;
             const evenementId = setEvenementId(textInput);
             console.log(evenementId)
+            fetchGetDatas()
+            .then(async (res)=>{
+                generatingAllCards(await fetchGetDatas())
+            })
             const evenementTextInput = allEventsArr.filter(item => item.id===evenementId);
             const inputParent = textInput.parentElement;
             const lala = inputParent.parentElement;
-            console.log(inputParent);
+
+            
             const attend= createObjectAttendee(attendeeName,evenementTextInput);
             fecthPostParticipants(attend,evenementId,lala);
         }
