@@ -10,8 +10,7 @@ const showNewParticipant = async (data,b) =>{
 
     // domLastAttendee(attendeesName.name,b,iteration, data.id);
     domLastAttendee(attendeesName.name,b,iteration, data.id);
-    console.log(attendeesName.name,b,iteration)
-    console.log(data.id)
+    
     
     return attendeesName.name;
 

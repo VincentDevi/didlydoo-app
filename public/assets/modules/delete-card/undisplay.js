@@ -7,11 +7,10 @@ export async function closeCard(id) {
             method: "DELETE",
         });
 
-        window.location.reload()
-
+        
         
     } 
     catch (err) {
-        console.log(err)
+        console.error(err)
     }
 }
