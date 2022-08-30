@@ -10,13 +10,14 @@ import { fetchGetDatas } from "../fetching/fetchGetDatas.js";
 const sendForm = () =>{
     const form = document.getElementById('form');
 
-    form.addEventListener('submit', submission =>{
-        submission.preventDefault();
-        const data =setAllDatas();
+    form.addEventListener('submit', event =>{
+        event.preventDefault();
+        const data = setAllDatas();
         FetchPostDatas(data)
         .then(async (res)=>{
             generatingAllCards(await fetchGetDatas())
         })
+        form.style.display= 'none'
     })
 }
 

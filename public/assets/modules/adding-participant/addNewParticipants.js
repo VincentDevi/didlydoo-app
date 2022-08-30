@@ -1,4 +1,6 @@
 import { fecthGetLastAttendee } from "./addLatestAttendee.js";
+import { generatingAllCards } from "../creationCard/generatingCards.js";
+
 /**
  * Create a div and add a title and 3 checkbox 
  * @param {name of the new participant} nom 
