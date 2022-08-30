@@ -1,3 +1,6 @@
+import { generatingAllCards } from "../creationCard/generatingCards";
+import { fetchGetDatas } from "../fetching/fetchGetDatas";
+
 export async function closeCard(id) {
     console.log(id)
     try {
@@ -5,8 +8,9 @@ export async function closeCard(id) {
             headers: { "Content-Type": "application/json" },
             method: "DELETE",
         });
-        window.location.reload()
-
+        
+        generatingAllCards(await fetchGetDatas())
+        
     } catch (err) {
         console.log(err)
     }

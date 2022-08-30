@@ -13,12 +13,13 @@ export let cards__table__entry
 
 
 let cards = document.querySelector('.cards')
-
+console.log(cards)
 // create CARD CONTAINER AND HEADER
 /**
  * Creating card container
  */
 const createMainArticle = (id) => {
+    
     cards__container = document.createElement('article');
     cards__container.classList.add('cards__container')
     cards__container.classList.add(id)

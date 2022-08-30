@@ -1,5 +1,6 @@
 body, html{
     background-color: $background;
+    z-index: -1;
 }
 main{
     height: 100vh;

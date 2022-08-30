@@ -1,18 +1,22 @@
 
+
 /**
  * send an object to the API
  * @param {*object}  val 
  */
+
 const FetchPostDatas = async (val)=>{
     try{
 
         const response = await fetch('http://localhost:3000/api/events/',{
             headers: { "Content-Type": "application/json" },
             method:'POST',
-            body : JSON.stringify(val),
-            })
-            window.location.reload()
-        }
+            body : JSON.stringify(val)
+        })
+        let json = await response.json()
+        console.log('RES POST',json)
+        return json
+    }
     catch(error){
         console.error(error);
     }
