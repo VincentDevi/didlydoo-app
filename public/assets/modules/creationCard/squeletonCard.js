@@ -93,6 +93,7 @@ const createNewInputLine = (aId) =>{
     cards__table__entry__name__input.classList.add('cards__table__entry__name__input')
     cards__table__entry__new.appendChild(cards__table__entry__name__input)
     cards__table__entry__name__input.type = "text"
+    cards__table__entry__name__input.placeholder = "Add your name"
 }
 
 const createDivTableEntryAttendee = () => {

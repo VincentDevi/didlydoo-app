@@ -1,12 +1,16 @@
-@import '_reset.scss';
+@import '_reset.scss', '_variables.scss';
 
 .cards{
 font-family: 'Montserrat', sans-serif;
 
-
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     input{
         display: inline-block;
-        height: 1rem;
         
     }
     
@@ -20,6 +24,11 @@ font-family: 'Montserrat', sans-serif;
         border-radius: 5px;
         box-shadow: 0px 1px 21px -3px rgba(0,0,0,0.82);
 
+
+        @include desktop{
+            width : 40%;
+         
+        }
     }
 
 
@@ -29,9 +38,17 @@ font-family: 'Montserrat', sans-serif;
         margin: 10px;
     }
     &__header{
+        @include tabletScreen{
+            margin: 2rem;  
+        }
+        @include desktop{
+            margin: 2rem;  
+        }
         &__top{
             display: flex;
             justify-content: space-between;
+
+
             &__title{
                 font-weight:900;
                 font-size: 1.6rem;
@@ -75,8 +92,20 @@ font-family: 'Montserrat', sans-serif;
 
             height: 3.5rem;
             font-size: 0.5rem;
+            
 
             text-align: center;
+            &__date{
+                @include tabletScreen{
+                font-size: 1rem;
+                padding:1rem;
+                }
+                @include desktop{
+                    font-size: 0.8rem;
+                    overflow: scroll;
+                }
+            }
+            
 
             &__empty{
                 background-color:white;
@@ -89,6 +118,15 @@ font-family: 'Montserrat', sans-serif;
             height: 2rem;
             color: $form_submit;
             font-weight: 700;
+            &__title{
+                padding-top:0.5rem;
+                padding-bottom:0.5rem;
+            }
+            &__total{
+                padding-top:0.5rem;
+                padding-bottom:0.5rem;
+                text-align: center;
+            }
         }
 
         &__entry{
@@ -123,11 +161,13 @@ font-family: 'Montserrat', sans-serif;
 
 .cards__table__header > * , .cards__table__count > * , .cards__table__entry > * , .cards__table__entry__attendee > *, .cards__table__entry__new > * {
     flex: 1 1 auto;
+    min-width: 2rem;
     outline: rgb(225, 223, 223) solid 1px;
     
 }
 
 .cards__table__header__empty, .cards__table__count__title, .cards__table__entry__name, .cards__table__entry__name__input, .cards__table__entry__name__input{
     max-width: 8rem;
+    min-width: 8rem;
     width: 8rem;
 }

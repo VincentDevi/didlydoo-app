@@ -23,7 +23,7 @@ const mapAllDates = (arr) =>{
 export const generatingAllCards = (array) =>{
 
     array.map(e =>{
-        
+        // cards.innerHTML= "";
         createCardSqueleton(e.id)
         createTitleH2(e.name, cards__header__top)
         createCloseIcon(cards__header__top, e.id)

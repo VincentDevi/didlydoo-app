@@ -17,7 +17,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
           text-size-adjust: none;
 }
 
-footer, header, nav, section, main {
+footer, nav, section, main {
   display: block;
 }
 
@@ -158,7 +158,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
           text-size-adjust: none;
 }
 
-footer, header, nav, section, main {
+footer, nav, section, main {
   display: block;
 }
 
@@ -192,9 +192,16 @@ input {
   font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
+@media only screen and (min-width: 1200px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .cards input {
   display: inline-block;
-  height: 1rem;
 }
 .cards__container {
   border: gray 1px solid;
@@ -203,8 +210,23 @@ input {
   border-radius: 5px;
   box-shadow: 0px 1px 21px -3px rgba(0, 0, 0, 0.82);
 }
+@media only screen and (min-width: 1200px) {
+  .cards__container {
+    width: 40%;
+  }
+}
 .cards__header > * {
   margin: 10px;
+}
+@media only screen and (min-width: 600px) {
+  .cards__header {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cards__header {
+    margin: 2rem;
+  }
 }
 .cards__header__top {
   display: flex;
@@ -245,6 +267,18 @@ input {
   font-size: 0.5rem;
   text-align: center;
 }
+@media only screen and (min-width: 600px) {
+  .cards__table__header__date {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cards__table__header__date {
+    font-size: 0.8rem;
+    overflow: scroll;
+  }
+}
 .cards__table__header__empty {
   background-color: white;
 }
@@ -253,6 +287,15 @@ input {
   height: 2rem;
   color: rgb(72, 127, 255);
   font-weight: 700;
+}
+.cards__table__count__title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.cards__table__count__total {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 .cards__table__entry {
   display: flex;
@@ -276,11 +319,13 @@ input {
 
 .cards__table__header > *, .cards__table__count > *, .cards__table__entry > *, .cards__table__entry__attendee > *, .cards__table__entry__new > * {
   flex: 1 1 auto;
+  min-width: 2rem;
   outline: rgb(225, 223, 223) solid 1px;
 }
 
 .cards__table__header__empty, .cards__table__count__title, .cards__table__entry__name, .cards__table__entry__name__input, .cards__table__entry__name__input {
   max-width: 8rem;
+  min-width: 8rem;
   width: 8rem;
 }
 
@@ -299,10 +344,111 @@ header img {
 header h1 {
   font-size: 2.3rem;
   font-weight: 800;
-
   padding: 2rem;
 }
 header h2 {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+.btnNewEvent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  right: 2rem;
+  margin-top: 1rem;
+  background-color: #ad1c1c;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+@media only screen and (min-width: 1200px) {
+  .btnNewEvent {
+    right: 7rem;
+  }
+}
+
+.btnNewEvent:hover, .btnNewEvent:focus {
+  background-color: #d13f3f;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
