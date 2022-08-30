@@ -19,8 +19,9 @@ export const createCloseIcon = (parent, id) => {
     closeIcon.classList.add(id)
     closeIcon.setAttribute("value",id)
     closeIcon.addEventListener("click", closCard =>{
+        closCard.preventDefault();
         closeCard(id)
-        
+               
     })
     parent.appendChild(closeIcon)
 }
